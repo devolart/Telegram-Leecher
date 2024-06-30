@@ -1,1 +1,1 @@
-python3 noroot.py &&cd Telegram-Leecher/ && python3 -m colab_leecher
+python3 noroot.py && python3 -m colab_leecher
