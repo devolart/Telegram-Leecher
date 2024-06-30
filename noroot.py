@@ -39,7 +39,6 @@ def Loading():
         black = (black + 2) % 75
         white = (white -1) if white != 0 else 37
         time.sleep(2)
-    clear_output()
 
 
 _Thread = Thread(target=Loading, name="Prepare", args=())
@@ -49,9 +48,7 @@ if len(str(DUMP_ID)) == 10 and "-100" not in str(DUMP_ID):
     n_dump = "-100" + str(DUMP_ID)
     DUMP_ID = int(n_dump)
 
-cmd = "git clone https://github.com/XronTrix10/Telegram-Leecher"
-proc = subprocess.run(cmd, shell=True)
-cmd = "pip3 install -r Telegram-Leecher/requirements.txt"
+cmd = "pip3 install -r requirements.txt"
 proc = subprocess.run(cmd, shell=True)
 
 credentials = {
@@ -62,12 +59,12 @@ credentials = {
     "DUMP_ID": DUMP_ID,
 }
 
-with open('Telegram-Leecher/credentials.json', 'w') as file:
+with open('credentials.json', 'w') as file:
     file.write(json.dumps(credentials))
 
 Working = False
 
-if os.path.exists("Telegram-Leecher/my_bot.session"):
-    os.remove("Telegram-Leecher/my_bot.session") # Remove previous bot session
+if os.path.exists("my_bot.session"):
+    os.remove("my_bot.session") # Remove previous bot session
     
 print("\rStarting Bot....")
