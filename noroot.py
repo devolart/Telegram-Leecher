@@ -48,9 +48,6 @@ if len(str(DUMP_ID)) == 10 and "-100" not in str(DUMP_ID):
     n_dump = "-100" + str(DUMP_ID)
     DUMP_ID = int(n_dump)
 
-cmd = "pip3 install -r requirements.txt"
-proc = subprocess.run(cmd, shell=True)
-
 credentials = {
     "API_ID": API_ID,
     "API_HASH": API_HASH,
