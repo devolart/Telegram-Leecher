@@ -71,5 +71,3 @@ if os.path.exists("Telegram-Leecher/my_bot.session"):
     os.remove("Telegram-Leecher/my_bot.session") # Remove previous bot session
     
 print("\rStarting Bot....")
-
-! cd Telegram-Leecher/ && python3 -m colab_leecher
